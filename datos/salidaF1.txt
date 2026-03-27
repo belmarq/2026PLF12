@@ -1,0 +1,94 @@
+
+Formula:  A
+Infijo:   ['A']
+Postfijo: ['A']
+FNC:      [
+(A)
+]
+
+Formula:  A&B
+Infijo:   ['A', '&', 'B']
+Postfijo: ['A', 'B', '&']
+FNC:      [
+(A)
+(B)
+]
+
+Formula:  A|B
+Infijo:   ['A', '|', 'B']
+Postfijo: ['A', 'B', '|']
+FNC:      [
+(A | B)
+]
+
+Formula:  A>B
+Infijo:   ['A', '>', 'B']
+Postfijo: ['A', 'B', '>']
+FNC:      [
+(-A | B)
+]
+
+Formula:  A=B
+Infijo:   ['A', '=', 'B']
+Postfijo: ['A', 'B', '=']
+FNC:      [
+(A | -B)
+(B | -A)
+]
+
+Formula:  -A
+Infijo:   ['-', 'A']
+Postfijo: ['A', '-']
+FNC:      [
+(-A)
+]
+
+Formula:  Dinero&Tiempo=Cine
+Infijo:   ['Dinero', '&', 'Tiempo', '=', 'Cine']
+Postfijo: ['Dinero', 'Tiempo', 'Cine', '=', '&']
+FNC:      [
+(DINERO)
+(TIEMPO | -CINE)
+(CINE | -TIEMPO)
+]
+
+Formula:  (Dinero&Tiempo)=Cine
+Infijo:   ['(', 'Dinero', '&', 'Tiempo', ')', '=', 'Cine']
+Postfijo: ['Dinero', 'Tiempo', '&', 'Cine', '=']
+FNC:      [
+(DINERO | -CINE)
+(TIEMPO | -CINE)
+(CINE | -DINERO | -TIEMPO)
+]
+
+Formula:  Dinero&Tiempo|Cine
+Infijo:   ['Dinero', '&', 'Tiempo', '|', 'Cine']
+Postfijo: ['Dinero', 'Tiempo', '&', 'Cine', '|']
+FNC:      [
+(DINERO | CINE)
+(TIEMPO | CINE)
+]
+
+Formula:  Dinero|Tiempo&Cine
+Infijo:   ['Dinero', '|', 'Tiempo', '&', 'Cine']
+Postfijo: ['Dinero', 'Tiempo', 'Cine', '&', '|']
+FNC:      [
+(DINERO | TIEMPO)
+(DINERO | CINE)
+]
+
+Formula:  -(Dinero&Tiempo)=-Cine
+Infijo:   ['-', '(', 'Dinero', '&', 'Tiempo', ')', '=', '-', 'Cine']
+Postfijo: ['Dinero', 'Tiempo', '&', '-', 'Cine', '-', '=']
+FNC:      [
+(-DINERO | -TIEMPO | CINE)
+(-CINE | DINERO)
+(-CINE | TIEMPO)
+]
+
+Formula:  Dinero>-Tiempo
+Infijo:   ['Dinero', '>', '-', 'Tiempo']
+Postfijo: ['Dinero', 'Tiempo', '-', '>']
+FNC:      [
+(-DINERO | -TIEMPO)
+]
