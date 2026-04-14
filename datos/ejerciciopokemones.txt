@@ -1,0 +1,40 @@
+ejemplos de problemas np competos
+Ash, Misty y Brock han organizado una batalla entre sus Pokemon. 
+Se conocen los siguientes datos al respecto:
+
+(a)  Uno, y sólo uno, de los siguientes Pokemon fue el vencedor: Pikachu, Bulbasaur,
+Togepi, Starmie, Vulpix y Onix.
+
+(b)  Ash ganó la batalla si el Pokemon vencedor fue Pikachu o Bulbasaur.
+
+
+(c)  Si o bien Togepi o bien Starmie fue el vencedor, Misty ganó la batalla.
+
+
+(d)  Brock ganó la batalla si el vencedor fue Onix o Vulpix.
+
+
+(e)  Si Onix fue derrotado, Starmie también.
+
+
+(f)  Bulbasaur fue derrotado.
+
+
+(g)  Si Pikachu fue derrotado, entonces Ash no ganó la batalla.
+
+
+(h)  Brock no ganó la batalla si Bulbasaur fue derrotado.
+
+
+(i)  Si Vulpix fue derrotado, Togepi y Onix también corrieron la misma suerte.
+
+
+Se pide:
+1.  Formalizar los datos anteriores en el lenguaje de la lógica proposicional.
+2.  Para cada fórmula obtenida, escribir un conjunto de cláusulas equivalente.
+3.  Usando resolución proposicional, demostrar que Ash fue el ganador.
+
+
+si
+si
+si
